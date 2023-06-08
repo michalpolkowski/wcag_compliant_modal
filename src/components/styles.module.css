@@ -1,0 +1,65 @@
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 1000;
+}
+
+.dialog {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	z-index: 1001;
+	padding: 1em;
+}
+
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* Using rgba to add an overlay effect with a color contrast ratio of at least 3:1 against adjacent color(s) */
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 1000;
+}
+
+.modal-dialog {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/* Setting a background color with a color contrast ratio of at least 4.5:1 for normal text */
+	background-color: white;
+	/* Using a higher z-index to ensure the modal appears above the overlay */
+	z-index: 1001;
+	padding: 1em;
+}
+
+.modal-dialog h2 {
+	/* This color is WCAG AA compliant for normal text (contrast ratio > 4.5:1 with white background) */
+	color: #333333;
+}
+
+.modal-dialog p {
+	/* This color is also WCAG AA compliant for normal text */
+	color: #333333;
+}
+
+.modal-dialog button {
+	/* This color is WCAG AA compliant for normal text, and the background color provides enough contrast with the text color */
+	color: #ffffff;
+	background-color: #333333;
+	border: none;
+	padding: 10px 20px;
+}
+
+.modal-dialog button:focus {
+	/* Adding a clear focus indicator for the button with a contrast ratio of at least 3:1 against the surrounding color */
+	outline: 3px solid #ff0000;
+}
